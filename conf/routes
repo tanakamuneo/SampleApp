@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+
+
+# Home page
+#GET        /                          controllers.Checks.index()
+#POST       /result                    controllers.Checks.result()
+#GET        /result                    controllers.Checks.resultId(id: Long = 1L)
+#GET        /result/:id                controllers.Checks.resultId(id: Long)
+#GET        /recent                    controllers.Checks.recent(page: Integer = 1)
+#GET        /recent/:page              controllers.Checks.recent(page: Integer)
+
+
+#既存の分
+#GET     /                           controllers.Application.index()
+GET     /                           controllers.ChecksController.index()
+POST    /result                     controllers.ChecksController.result()
+POST    /result/:id			        controllers.ChecksController.resultId(id:Long)
+GET     /recent/:page				controllers.ChecksController.recent(page:Integer)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
